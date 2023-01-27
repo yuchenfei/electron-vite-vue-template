@@ -1,0 +1,37 @@
+/**
+ * * electron-builder Configuration
+ * @see https://www.electron.build/configuration/configuration
+ */
+{
+  "appId": "com.electron.demo",
+  "files": [
+    "dist/electron",
+    "dist/renderer"
+  ],
+  "directories": {
+    "output": "release/${version}"
+  },
+  "icon": "public/favicon.ico",
+  "asar": true,
+  "mac": {
+    "target": [
+      "dmg"
+    ],
+    "artifactName": "${productName}_${version}.${ext}"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis", // nsis, portable
+        "arch": [
+          "x64" // x64, ia32
+        ]
+      }
+    ],
+    "artifactName": "${productName}_${version}.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  }
+}
