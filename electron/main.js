@@ -18,7 +18,7 @@ const createWindow = () => {
   if (process.env.NODE_ENV === 'development') {
     win.loadURL(`http://localhost:5173`)
   } else {
-    win.loadFile(join(__dirname, '..', 'renderer', 'index.html'))
+    win.loadFile(join(app.getAppPath(), 'dist', 'renderer', 'index.html'))
   }
 }
 
