@@ -10,6 +10,6 @@ export default {
   base: './', // default: '/'. after build, electron fail to load resources
   plugins: [vue()],
   build: {
-    outDir: join(__dirname, 'dist', 'renderer'),
-  },
+    outDir: join(__dirname, 'dist', 'renderer')
+  }
 }
