@@ -8,8 +8,8 @@ const createWindow = () => {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      preload: join(__dirname, 'preload.cjs'),
-    },
+      preload: join(__dirname, 'preload.cjs')
+    }
   })
 
   win.once('ready-to-show', () => {

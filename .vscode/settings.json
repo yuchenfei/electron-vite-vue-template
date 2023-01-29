@@ -1,4 +1,5 @@
 {
+  // electron-builder.json5
   "files.associations": {
     "*.json5": "jsonc"
   },
@@ -10,5 +11,21 @@
       ],
       "url": "https://json.schemastore.org/electron-builder"
     }
-  ]
+  ],
+  // Prettier & Formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[vue]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+    }
+  },
+  // Eslint
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
 }

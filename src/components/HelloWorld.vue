@@ -1,8 +1,8 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 defineProps({
-  msg: String,
+  msg: { type: String, default: '' }
 })
 
 const count = ref(0)
@@ -22,17 +22,23 @@ const sendPind = async () => {
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
-    <p>node version: <code>{{ node() }}</code></p>
-    <p>chrome version: <code>{{ chrome() }}</code></p>
-    <p>electorn version: <code>{{ electron() }}</code></p>
+    <p>
+      node version: <code>{{ node() }}</code>
+    </p>
+    <p>
+      chrome version: <code>{{ chrome() }}</code>
+    </p>
+    <p>
+      electorn version: <code>{{ electron() }}</code>
+    </p>
     <button type="button" @click="sendPind">ping</button>
     <p>{{ result }}</p>
   </div>
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite
-    starter
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the
+    official Vue + Vite starter
   </p>
   <p>
     Install

@@ -14,12 +14,12 @@ export default defineConfig(({ mode }) => {
       lib: {
         entry: ['main.js', 'preload.js'],
         formats: ['cjs'],
-        fileName: () => '[name].cjs',
+        fileName: () => '[name].cjs'
       },
       rollupOptions: {
-        external: ['electron'],
+        external: ['electron']
       },
-      emptyOutDir: true,
-    },
+      emptyOutDir: true
+    }
   }
 })
