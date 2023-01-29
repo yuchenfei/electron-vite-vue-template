@@ -1,6 +1,5 @@
-// ES modules 目前不支持 (electron/electron#21457)
-const { app, BrowserWindow, ipcMain } = require('electron')
-const { join } = require('path')
+import { app, BrowserWindow, ipcMain } from 'electron'
+import { join } from 'path'
 
 const createWindow = () => {
   const win = new BrowserWindow({
